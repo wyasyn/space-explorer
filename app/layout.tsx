@@ -5,19 +5,19 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 
-export const barlow = Barlow({
+const barlow = Barlow({
     weight: ["400", "500", "600", "700", "800"],
     subsets: ["latin"],
     variable: "--font-barlow",
 });
 
-export const barlowCondensed = Barlow_Condensed({
+const barlowCondensed = Barlow_Condensed({
     weight: ["400", "500", "600", "700", "800"],
     subsets: ["latin"],
     variable: "--font-barlow-condensed",
 });
 
-export const belleFair = Bellefair({
+const belleFair = Bellefair({
     weight: ["400"],
     subsets: ["latin"],
     variable: "--font-belle-fair",
