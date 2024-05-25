@@ -14,14 +14,16 @@ export default function NavLinkMobile({
     const pathname = usePathname();
     const isActive = pathname === url;
     return (
-        <li
-            key={name}
-            className={` ${
-                isActive && "border-r-4 border-white"
-            } hover:border-r-2 text-md flex items-center gap-3 uppercase transition-all duration-300 `}
-        >
-            <span className=" font-bold ">0 {index}</span>
-            <Link href={url}>{name}</Link>
+        <li key={name}>
+            <Link
+                href={url}
+                className={` ${
+                    isActive ? "border-r-4 border-white" : ""
+                }  hover:border-r-2 text-md flex items-center gap-3 uppercase transition-all duration-300 `}
+            >
+                <span className=" font-bold ">0{index}</span>
+                <h3>{name}</h3>
+            </Link>
         </li>
     );
 }

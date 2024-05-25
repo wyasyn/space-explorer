@@ -1,5 +1,7 @@
 import Image from "next/image";
-import technology from "@/components/data.json";
+import data from "@/components/data.json";
+import Title from "@/components/title";
+import TechnologyItem from "@/components/technology";
 
 const images = {
     mobile: "/assets/technology/background-technology-mobile.jpg",
@@ -28,23 +30,11 @@ export default function Home() {
                 className=" object-cover w-full h-full hidden lg:block"
                 fill
             />
-            <div className="container z-50 relative min-h-dvh grid place-items-center">
-                <div className=" flex flex-col gap-[5rem] lg:gap-[15rem] text-center lg:text-left items-center lg:flex-row lg:items-end ">
-                    <div>
-                        <h3
-                            className={` font-normal text-sm font-barlowcondensed `}
-                        >
-                            technology
-                        </h3>
-                        <h1
-                            className={`text-7xl my-[2rem]  text-white font-normal font-bellefair `}
-                        >
-                            SPACE
-                        </h1>
-                        <p className=" max-w-[50ch] ">text</p>
-                    </div>
-                    <div>part two</div>
+            <div className="z-50 relative min-h-dvh ">
+                <div className="w-[90%] max-w-[1400px] ml-auto mt-[10rem]">
+                    <Title idx="03" title="space launch 101" />
                 </div>
+                <TechnologyItem technologies={data.technology} />
             </div>
         </section>
     );
